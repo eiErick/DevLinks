@@ -75,13 +75,13 @@ body * {
 
   position: absolute;
   z-index: 1;
-  right: 0px;
+  left: 0px;
   transform: translateY(-50%);
   top: 50%;
+  animation: dark .3s;
 }
 .light #switch button{
-  left: 0;
-  right: initial;
+  animation: light .3s forwards;
 }
 #switch span{
   display: block;
@@ -163,5 +163,24 @@ footer {
 
   .light{
     --bg-url: url(../imagens/bg-desktop-light.jpg);
+  }
+}
+
+/*animações*/
+
+@keyframes light {
+  from{
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes dark {
+  from {
+   left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
